@@ -169,6 +169,7 @@ public class Player extends Entity {
 					lastBullet++;
 				else
 					lastBullet = 0;
+				/* original com tiro diagonal: 
 				int x3 = this.getX() + 1;
 				int y3 = this.getY() + 4;
 				Bullet bullet4 = new Bullet(x3, y3, 2, 2, 4, null, 1);
@@ -182,6 +183,24 @@ public class Player extends Entity {
 				x3 = this.getX() + 13;
 				Bullet bullet7 = new Bullet(x3, y3, 2, 2, 4, null, 2);
 				Game.entities.add(bullet7);
+				*/
+				
+				// com 3 tiros para matar asteroid grande sem sobra de tiro
+				int x3 = this.getX() + 7;
+				int y3 = this.getY();
+				Bullet bullet4 = new Bullet(x3, y3, 2, 2, 4, null, 0);
+				Game.entities.add(bullet4);
+				x3 = this.getX() + 5;
+				y3 = this.getY() + 4;
+				Bullet bullet5 = new Bullet(x3, y3, 2, 2, 4, null, 0);
+				Game.entities.add(bullet5);
+				x3 = this.getX() + 9;
+				Bullet bullet6 = new Bullet(x3, y3, 2, 2, 4, null, 0);
+				Game.entities.add(bullet6);
+				//x3 = this.getX() + 13;
+				//Bullet bullet7 = new Bullet(x3, y3, 2, 2, 4, null, 2);
+				//Game.entities.add(bullet7);
+				
 				break;
 
 				
